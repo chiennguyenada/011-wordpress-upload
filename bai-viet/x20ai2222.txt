@@ -1,0 +1,69 @@
+Module X20AI2222 của B&R Automation là giải pháp đo lường tín hiệu tương tự với 2 đầu vào ±10V, độ phân giải 13-bit, thời gian chuyển đổi 300 µs, lý tưởng cho tự động hóa công nghiệp.  
+• Mã sản phẩm: X20AI2222  
+• Thương hiệu: B&R Automation  
+• Xuất xứ: Áo  
+Module X20AI2222: 2 đầu vào ±10V, 13-bit, 300 µs, đo lường chính xác cho PLC và giám sát công nghiệp.  
+Từ khóa phụ: module analog, đo điện áp, tự động hóa  
+
+<H1>Module Tín Hiệu Vào Tương Tự X20AI2222</H1>  
+Module tín hiệu vào tương tự X20AI2222 thuộc dòng X20 System của B&R Automation, thương hiệu hàng đầu trong lĩnh vực tự động hóa công nghiệp. Được phân phối chính thức tại Việt Nam bởi Agow Automation, module này tích hợp 2 đầu vào điện áp ±10V với độ phân giải 13-bit (bao gồm dấu) và thời gian chuyển đổi 300 µs cho tất cả các kênh (datasheet, trang 2). X20AI2222 phù hợp với các ứng dụng đo lường điện áp trong hệ thống PLC và giám sát công nghiệp, hỗ trợ terminal 6-pin hoặc 12-pin tùy nhu cầu (manual, trang 1).  
+
+<H2>Lợi ích nổi bật của X20AI2222</H2>  
+<H3>Đo lường chính xác và linh hoạt</H3>  
+Với độ phân giải 13-bit và bộ lọc đầu vào cấu hình được (manual, trang 6-7), X20AI2222 đảm bảo tín hiệu đo chính xác, giảm nhiễu hiệu quả nhờ hạn chế biên độ (input ramp limiting) và bộ lọc mức (filter level). Sai số tối đa tại 25°C chỉ 0.06% (manual, trang 2), phù hợp cho các ứng dụng yêu cầu độ tin cậy cao.  
+
+<H3>Tích hợp dễ dàng và độ bền</H3>  
+Module tương thích với bus module X20BM11, dễ dàng tích hợp vào hệ thống X20 (manual, trang 3). Với nhiệt độ hoạt động từ -25°C đến 60°C, chứng nhận CE, UL, và độ cách ly kênh-bus 500V hiệu dụng (manual, trang 2), X20AI2222 hoạt động ổn định trong nhiều điều kiện khắc nghiệt.  
+
+<H3>Hiệu suất năng lượng</H3>  
+Công suất tiêu thụ thấp, chỉ 0.01W cho bus và 0.8W cho I/O nội bộ (manual, trang 2), giúp tiết kiệm năng lượng trong các hệ thống lớn.  
+
+[INSERT_IMAGE_HERE]  
+<H2>Ứng dụng thực tế của X20AI2222</H2>  
+<H3>Giám sát tín hiệu điện áp</H3>  
+X20AI2222 đo lường điện áp ±10V chính xác, phù hợp cho ngành cơ khí và sản xuất gỗ, hỗ trợ giám sát thiết bị và kiểm tra chất lượng (manual, trang 2).  
+
+<H3>Điều khiển công nghiệp</H3>  
+Tích hợp vào PLC B&R, module xử lý tín hiệu nhanh cho dây chuyền tự động (manual, trang 5). Với độ bền cao, nó lý tưởng cho các ngành đóng gói, nhựa, và bán dẫn.  
+
+<H2>Thông tin kỹ thuật chi tiết</H2>  
+<H3>Đầu vào và bộ lọc</H3>  
+Hỗ trợ 2 đầu vào ±10V, trở kháng 20 MΩ, cách ly bus 500V hiệu dụng (manual, trang 2). Bộ lọc cấu hình với mức từ 2 đến 128 (manual, trang 7), hạn chế biên độ từ 255 đến 16383 (manual, trang 6), thời gian quét kênh khi bật lọc là 1 ms với độ lệch 200 µs giữa các kênh (manual, trang 10).  
+
+<H3>Độ phân giải và chống nhiễu</H3>  
+Độ phân giải 13-bit (12-bit + dấu), giá trị LSB 2.441 mV, độ phi tuyến tính 0.002%, độ suy giảm nhiễu chung (CMR) 70 dB tại 50 Hz (manual, trang 2). Có giám sát hở mạch qua LED và phần mềm, giá trị kỹ thuật số khi quá tải ±32767 (manual, trang 10). Độ trôi gain tối đa 0.006%/°C, độ trôi offset 0.002%/°C (manual, trang 2).  
+
+<H3>Phụ kiện yêu cầu</H3>  
+Cần bus module X20BM11 (24VDC) và terminal X20TB06 (6-pin) hoặc X20TB12 (12-pin), đặt mua riêng (manual, trang 3). Chu kỳ tối thiểu 100 µs (không lọc) hoặc 500 µs (có lọc) (manual, trang 10).  
+
+<H2>Hướng dẫn cài đặt và vận hành</H2>  
+<H3>Nhiệt độ môi trường</H3>  
+Hoạt động từ -25°C đến 60°C (ngang) hoặc 50°C (dọc), giảm 0.5°C mỗi 100m trên 2000m (manual, trang 3).  
+
+<H3>Kết nối dây</H3>  
+Dùng terminal 6-pin (khuyến nghị) hoặc 12-pin, đảm bảo đấu nối đúng để tránh lỗi nguồn, có bảo vệ chống nối nhầm điện áp nguồn (manual, trang 1-2).  
+
+<H2>Thông tin đặt hàng</H2>  
+<H3>Mã sản phẩm</H3>  
+X20AI2222 – Module analog input, 2 đầu vào ±10V, độ phân giải 13-bit (manual, trang 2).  
+• Mã sản phẩm: X20AI2222  
+• Thương hiệu: B&R Automation  
+• Xuất xứ: Áo  
+
+<H3>Phụ kiện cần thiết (đặt hàng riêng)</H3>  
+Cần bus module X20BM11 và terminal X20TB06 hoặc X20TB12 (manual, trang 3), đặt mua riêng.  
+
+Để sở hữu sản phẩm chính hãng, liên hệ Agow Automation – nhà phân phối uy tín của B&R Automation tại Việt Nam.  
+
+<H2>Câu hỏi thường gặp về Module X20AI2222</H2>  
+<H3>X20AI2222 hỗ trợ tín hiệu nào?</H3>  
+Đo điện áp ±10V với độ phân giải 13-bit (manual, trang 2).  
+
+<H3>Thời gian chuyển đổi tín hiệu là bao nhiêu?</H3>  
+300 µs cho tất cả kênh (manual, trang 2).  
+
+<H3>Làm sao để giảm nhiễu tín hiệu?</H3>  
+Cấu hình bộ lọc và hạn chế biên độ qua phần mềm (manual, trang 6-9).  
+
+<H3>Mua X20AI2222 ở đâu tại Việt Nam?</H3>  
+Liên hệ Agow Automation để đặt hàng nhanh chóng.  

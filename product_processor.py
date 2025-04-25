@@ -9,6 +9,9 @@ with open('config.json', 'r') as config_file:
     config = json.load(config_file)
 
 IMAGE_PREFIX = config['image_prefix']
+IMAGE_PREFIX_DIAGRAM = config['image_prefix_diagram']
+IMAGE_CAPTION_PREFIX = config.get('image_caption_prefix', 'Block diagram')  # Default if not in config
+IMAGE_DESCRIPTION_PREFIX = config.get('image_description_prefix', 'Block diagram of module')  # Default if not in config
 DEFAULT_SECONDARY_KEYWORDS = config.get('default_secondary_keywords', [])
 
 def process_product_file(file_path):
@@ -121,9 +124,9 @@ def process_product_file(file_path):
     image_prefix_cleaned = IMAGE_PREFIX.replace("-", " ")
 
     # 7. Xử lý hình bài viết
-    # Tạo tên file hình bài viết với tiền tố "so-do-chan-"
-    image_filename_png = f"so-do-chan-{IMAGE_PREFIX}-{focus_keyword}.png"
-    image_filename_jpg = f"so-do-chan-{IMAGE_PREFIX}-{focus_keyword}.jpg"
+    # Tạo tên file hình bài viết với tiền tố từ config
+    image_filename_png = f"{IMAGE_PREFIX_DIAGRAM}-{IMAGE_PREFIX}-{focus_keyword}.png"
+    image_filename_jpg = f"{IMAGE_PREFIX_DIAGRAM}-{IMAGE_PREFIX}-{focus_keyword}.jpg"
     image_path_png = os.path.join("hinh-sp", image_filename_png)
     image_path_jpg = os.path.join("hinh-sp", image_filename_jpg)
     
@@ -160,8 +163,8 @@ def process_product_file(file_path):
         focus_keyword_part = relevant_parts[-1]  # Phần cuối là focus_keyword
         focus_keyword_upper = focus_keyword_part.upper()
         image_name_cleaned = " ".join(prefix_parts) + " " + focus_keyword_upper
-        image_caption = f"Sơ đồ chân {image_name_cleaned}"
-        image_description = f"Sơ đồ chân của module {product_name} thuộc dòng {image_prefix_cleaned} của B&R Automation."
+        image_caption = f"{IMAGE_CAPTION_PREFIX} {image_name_cleaned}"
+        image_description = f"{IMAGE_DESCRIPTION_PREFIX} {product_name} thuộc dòng {image_prefix_cleaned} của B&R Automation."
 
         # Upload hình bài viết lên WordPress và lấy thông tin
         image_info = upload_image_to_media(
@@ -220,8 +223,8 @@ def process_product_file(file_path):
                 
         # Tạo metadata cho hình đại diện
         avatar_alt_text = product_name
-        avatar_caption = f"Hình đại diện module {focus_keyword.upper()}"
-        avatar_description = f"Hình đại diện của module {product_name} thuộc dòng {image_prefix_cleaned} của B&R Automation."
+        avatar_caption = f"Hình đại diện {focus_keyword.upper()}"
+        avatar_description = f"Hình đại diện của {product_name} thuộc dòng {image_prefix_cleaned} của B&R Automation."
 
         # Upload hình đại diện lên WordPress và lấy thông tin
         avatar_info = upload_image_to_media(

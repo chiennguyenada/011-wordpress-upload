@@ -1,0 +1,74 @@
+Máy tính công nghiệp Automation PC 4100 5APC4100.SX03-000 của B&R Automation là thiết bị mạnh mẽ, 3 khe mở rộng (1 PCI, 2 PCIe x16), tích hợp Intel Core i-series, Ethernet, USB, CFexpress, tối ưu cho tự động hóa công nghiệp.
+• Mã sản phẩm: 5APC4100.SX03-000
+• Thương hiệu: B&R Automation
+• Xuất xứ: Áo
+Automation PC 4100 5APC4100.SX03-000: Máy tính công nghiệp Intel Core i-series, 3 khe (1 PCI, 2 PCIe x16), Ethernet, USB, CFexpress, lý tưởng cho ứng dụng tự động hóa lớn.
+Từ khóa phụ: Máy tính công nghiệp, APC 4100, Intel Core
+
+<H1>Máy Tính Công Nghiệp Automation PC 4100 5APC4100.SX03-000</H1>
+Máy tính công nghiệp Automation PC 4100 5APC4100.SX03-000 của B&R Automation là giải pháp tối ưu cho các ứng dụng tự động hóa quy mô lớn. Thiết bị sử dụng CPU Intel Core i-series, tích hợp 3 khe mở rộng (1 PCI, 2 PCIe x16), các giao diện Ethernet, USB 3.0, RS232, POWERLINK, và khe CFexpress (manual, trang 42, 74). Với khả năng mở rộng vượt trội, APC 4100 5APC4100.SX03-000 phù hợp cho các ngành năng lượng, sản xuất ô tô và bán dẫn (manual, trang 15).
+
+<H2>Lợi ích nổi bật của 5APC4100.SX03-000</H2>
+<H3>Hiệu suất xử lý mạnh mẽ</H3>
+APC 4100 5APC4100.SX03-000 hỗ trợ CPU Intel Core i-series (i3, i5, i7), cung cấp hiệu suất cao cho các tác vụ phức tạp (manual, trang 54). Bộ nhớ DDR4 4-32 GB và khe CFexpress đảm bảo tốc độ truy xuất nhanh (manual, trang 72, 85).
+
+<H3>Kết nối và mở rộng linh hoạt</H3>
+Thiết bị tích hợp 2 cổng Ethernet 10/100/1000 Mbit/s, 2 cổng USB 3.0, 1 cổng RS232, POWERLINK V2, và 3 khe mở rộng (1 PCI, 2 PCIe x16) cho phép thêm thẻ giao diện (manual, trang 42, 74). Giao diện DVI-D và DisplayPort hỗ trợ màn hình độ phân giải cao (manual, trang 42).
+
+<H3>Độ bền và tiết kiệm năng lượng</H3>
+Hoạt động ở nhiệt độ từ 0°C đến 60°C (tùy cấu hình), APC 4100 đạt chứng nhận CE, UL, UKCA và IP20 (manual, trang 25, 226-227). Nguồn vào 24 VDC (±25%) với công suất tiêu thụ thấp (manual, trang 35).
+
+[INSERT_IMAGE_HERE]
+<H2>Ứng dụng thực tế của 5APC4100.SX03-000</H2>
+<H3>Điều khiển hệ thống lớn</H3>
+APC 4100 5APC4100.SX03-000 điều khiển chính xác các hệ thống tự động hóa lớn trong ngành năng lượng và bán dẫn nhờ CPU mạnh và giao diện POWERLINK V2 (manual, trang 231).
+
+<H3>Giám sát và thu thập dữ liệu</H3>
+Với Ethernet, USB, và 3 khe mở rộng, thiết bị hỗ trợ giám sát thời gian thực và thu thập dữ liệu trong hệ thống SCADA hoặc IoT công nghiệp (manual, trang 85).
+
+<H2>Thông tin kỹ thuật chi tiết</H2>
+<H3>Hiệu suất và bộ nhớ</H3>
+CPU Intel Core i-series, DDR4 RAM 4-32 GB, khe CFexpress (60 GB đến 960 GB) (manual, trang 54, 72, 85). Hỗ trợ Windows 10 IoT Enterprise, Linux for B&R (manual, trang 178-181).
+
+<H3>Giao diện và kết nối</H3>
+- Ethernet: 2 cổng 10/100/1000 Mbit/s, hỗ trợ POWERLINK V2 (manual, trang 42).
+- USB: 2 cổng USB 3.0, dòng tối đa 0.9 A mỗi cổng (manual, trang 42).
+- RS232: 1 cổng, tốc độ tối đa 115 kbit/s (manual, trang 234).
+- Khe mở rộng: 1 PCI, 2 PCIe x16 (manual, trang 74).
+- Video: DVI-D, DisplayPort (manual, trang 42).
+
+<H3>Nguồn điện và môi trường</H3>
+Nguồn vào 24 VDC (±25%), công suất tiêu thụ tối đa 100 W (tùy cấu hình) (manual, trang 35). Nhiệt độ hoạt động 0°C đến 60°C, lưu trữ -40°C đến 85°C, độ ẩm 10-95% không ngưng tụ (manual, trang 25).
+
+<H3>Phụ kiện yêu cầu</H3>
+Cần đầu nối 24 VDC (0TB103.9/0TB103.91), pin CMOS (5ACCRPC4.BT02-000), giá gắn (5APC4100.MB0x-000) (manual, trang 214, 216, 217).
+
+<H2>Hướng dẫn cài đặt và vận hành</H2>
+<H3>Điều kiện môi trường</H3>
+Lắp đặt trong nhà, độ cao tối đa 3000 m, giảm 1°C mỗi 1000 m từ 500 m trở lên (manual, trang 25). Đảm bảo thông thoáng để tránh quá nhiệt (manual, trang 121).
+
+<H3>Kết nối và bảo trì</H3>
+Sử dụng dây đồng, nhiệt độ định mức 90°C, AWG 22-12 (manual, trang 227). Pin CMOS cần thay sau 5 năm, thay trong vòng 1 phút khi không có nguồn (manual, trang 195).
+
+<H2>Thông tin đặt hàng</H2>
+<H3>Mã sản phẩm</H3>
+• 5APC4100.SX03-000 – Máy tính công nghiệp Intel Core i-series, 3 khe (1 PCI, 2 PCIe x16), Ethernet, USB, RS232, CFexpress (manual, trang 15).
+• Mã sản phẩm: 5APC4100.SX03-000
+• Thương hiệu: B&R Automation
+• Xuất xứ: Áo
+
+<H3>Phụ kiện cần thiết (đặt hàng riêng)</H3>
+Đầu nối 24 VDC (0TB103.9/0TB103.91), pin CMOS (5ACCRPC4.BT02-000), giá gắn (5APC4100.MB0x-000) (manual, trang 214, 216, 217).
+
+<H2>Câu hỏi thường gặp về 5APC4100.SX03-000</H2>
+<H3>5APC4100.SX03-000 hỗ trợ giao diện nào?</H3>
+Ethernet, POWERLINK V2, USB 3.0, RS232, 3 khe (1 PCI, 2 PCIe x16), DVI-D, DisplayPort (manual, trang 42, 74).
+
+<H3>5APC4100.SX03-000 phù hợp với ứng dụng nào?</H3>
+Điều khiển hệ thống lớn, giám sát và thu thập dữ liệu trong công nghiệp (manual, trang 15).
+
+<H3>Làm sao để cài đặt phần mềm trên 5APC4100.SX03-000?</H3>
+Sử dụng Automation Studio hoặc hệ điều hành được hỗ trợ (Windows 10, Linux) (manual, trang 178-181).
+
+<H3>Mua 5APC4100.SX03-000 ở đâu tại Việt Nam?</H3>
+Liên hệ Agow Automation để đặt hàng chính hãng và nhanh chóng.

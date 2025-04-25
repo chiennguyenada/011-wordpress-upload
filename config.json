@@ -2,19 +2,22 @@
     "WP_URL": "https://agowautomation.com/wp-json",
     "CONSUMER_KEY": "ck_7765175eaf46e299ac44288dd52f86f469926cf9",
     "CONSUMER_SECRET": "cs_912efd45da6e233cabe5630805d2a3c860401c6a",
-    "image_prefix": "module",
+    "image_prefix": "automation-pc-4100",
+    "image_prefix_diagram": "block-diagram",
+    "image_caption_prefix": "Block diagram",
+    "image_description_prefix": "Block diagram",
     "wp_username": "chiennguyen",
     "wp_password": "V1M8 Lylu woph UYZO j3vv PsMT",
     "auth_method": "app_password",
     "categories": [
-        {"id": 677},
-        {"id": 678},
+        {"id": 728},
+        {"id": 502},
         {"id": 134}
     ],
     "tags": [
-        {"id": 725},
-        {"id": 726},
+        {"id": 515},
+        {"id": 727},
         {"id": 688}
     ],
-    "default_secondary_keywords": ["B&R Automation", "x20 safety PLC"]
+    "default_secondary_keywords": ["B&R Automation", "Automation PC 4100"]
 }

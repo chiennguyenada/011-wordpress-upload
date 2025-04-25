@@ -60,10 +60,10 @@ def check_images_for_all_files(txt_files, image_prefix):
             continue
 
         # Tạo tên file hình sản phẩm và hình đại diện (kiểm tra cả .png và .jpg)
-        image_filename_png = f"so-do-chan-{image_prefix}-{focus_keyword}.png"
-        image_filename_jpg = f"so-do-chan-{image_prefix}-{focus_keyword}.jpg"
-        avatar_filename_png = f"{image_prefix}-{focus_keyword}.png"
-        avatar_filename_jpg = f"{image_prefix}-{focus_keyword}.jpg"
+        image_filename_png = f"{config['image_prefix_diagram']}-{config['image_prefix']}-{focus_keyword}.png"
+        image_filename_jpg = f"{config['image_prefix_diagram']}-{config['image_prefix']}-{focus_keyword}.jpg"
+        avatar_filename_png = f"{config['image_prefix']}-{focus_keyword}.png"
+        avatar_filename_jpg = f"{config['image_prefix']}-{focus_keyword}.jpg"
         
         image_path_png = os.path.join("hinh-sp", image_filename_png)
         image_path_jpg = os.path.join("hinh-sp", image_filename_jpg)
@@ -94,8 +94,8 @@ def check_existing_images(txt_files, image_prefix):
             continue
 
         # Tạo tên file hình sản phẩm và hình đại diện (kiểm tra không phụ thuộc phần mở rộng)
-        image_filename = f"so-do-chan-{image_prefix}-{focus_keyword}"
-        avatar_filename = f"{image_prefix}-{focus_keyword}"
+        image_filename = f"{config['image_prefix_diagram']}-{config['image_prefix']}-{focus_keyword}"
+        avatar_filename = f"{config['image_prefix']}-{focus_keyword}"
         
         # Kiểm tra sự tồn tại của hình ảnh trên WordPress Media
         # Kiểm tra cả .png và .jpg và các biến thể có thể có
@@ -411,111 +411,100 @@ def update_existing_product_media():
 
 def manage_media_library():
     """
-    Hàm quản lý thư viện media, cho phép tìm kiếm và xóa hình ảnh.
+    Hàm quản lý thư viện media (tìm kiếm, xóa hình ảnh)
     """
-    print("\n===== QUẢN LÝ THƯ VIỆN MEDIA =====")
-    print("1. Tìm kiếm hình ảnh theo tên file")
-    print("2. Xóa hình ảnh theo tên file")
-    print("3. Xóa hình ảnh của một sản phẩm")
-    print("4. Quay lại")
-    
-    choice = input("Nhập lựa chọn của bạn (1-4): ").strip()
-    
-    if choice == "1":
-        filename = input("\nNhập tên file cần tìm (không cần phần mở rộng, ví dụ: safety-plc-x20sl8110): ").strip()
-        if not filename:
-            print("Tên file không được để trống!")
-            return
+    while True:
+        print("\n===== QUẢN LÝ THƯ VIỆN MEDIA =====")
+        print("1. Tìm kiếm hình ảnh theo tên file")
+        print("2. Xóa hình ảnh theo tên file")
+        print("3. Xóa hình ảnh của một sản phẩm")
+        print("4. Quay lại menu chính")
         
-        # Tìm kiếm cả .png và .jpg
-        print(f"\nĐang tìm kiếm hình ảnh có tên: {filename}")
-        media_items = find_media_by_filename(filename)
+        choice = input("\nChọn chức năng (1-4): ").strip()
         
-        if media_items:
-            print(f"\nTìm thấy {len(media_items)} hình ảnh:")
-            for i, item in enumerate(media_items, 1):
-                print(f"{i}. ID: {item['id']}, URL: {item['url']}, Filename: {item['filename']}")
-        else:
-            print("Không tìm thấy hình ảnh nào phù hợp.")
-    
-    elif choice == "2":
-        filename = input("\nNhập tên file cần xóa (không cần phần mở rộng, ví dụ: safety-plc-x20sl8110): ").strip()
-        if not filename:
-            print("Tên file không được để trống!")
-            return
-        
-        # Tìm kiếm cả .png và .jpg
-        print(f"\nĐang tìm kiếm hình ảnh có tên: {filename}")
-        media_items = find_media_by_filename(filename)
-        
-        if media_items:
-            print(f"\nTìm thấy {len(media_items)} hình ảnh:")
-            for i, item in enumerate(media_items, 1):
-                print(f"{i}. ID: {item['id']}, URL: {item['url']}, Filename: {item['filename']}")
-            
-            confirm = input("\nBạn có chắc chắn muốn xóa (các) hình ảnh này không? (yes/no): ").strip().lower()
-            if confirm == 'yes':
-                delete_media_by_filename(filename)
-            else:
-                print("Đã hủy thao tác xóa.")
-        else:
-            print("Không tìm thấy hình ảnh nào phù hợp để xóa.")
-    
-    elif choice == "3":
-        focus_keyword = input("\nNhập mã sản phẩm (focus_keyword), ví dụ: x20ai2222: ").strip().lower()
-        if not focus_keyword:
-            print("Mã sản phẩm không được để trống!")
-            return
-        
-        # Load image_prefix from config
-        image_prefix = config['image_prefix']
-        
-        # Tạo tên file hình đại diện và hình sản phẩm (không có phần mở rộng)
-        avatar_filename = f"{image_prefix}-{focus_keyword}"
-        image_filename = f"so-do-chan-{image_prefix}-{focus_keyword}"
-        
-        print(f"\nĐang tìm kiếm hình ảnh của sản phẩm {focus_keyword.upper()}...")
-        avatar_items = find_media_by_filename(avatar_filename)
-        image_items = find_media_by_filename(image_filename)
-        
-        total_items = len(avatar_items) + len(image_items)
-        if total_items > 0:
-            print(f"\nTìm thấy {total_items} hình ảnh liên quan đến sản phẩm {focus_keyword.upper()}:")
-            
-            if avatar_items:
-                print("\nHình đại diện:")
-                for i, item in enumerate(avatar_items, 1):
-                    print(f"{i}. ID: {item['id']}, URL: {item['url']}, Filename: {item['filename']}")
-            
-            if image_items:
-                print("\nHình sản phẩm:")
-                for i, item in enumerate(image_items, 1):
-                    print(f"{i}. ID: {item['id']}, URL: {item['url']}, Filename: {item['filename']}")
-            
-            confirm = input("\nBạn có chắc chắn muốn xóa tất cả hình ảnh này không? (yes/no): ").strip().lower()
-            if confirm == 'yes':
-                deleted_avatar = delete_media_by_filename(avatar_filename) if avatar_items else False
-                deleted_image = delete_media_by_filename(image_filename) if image_items else False
-                
-                if deleted_avatar or deleted_image:
-                    print("Đã xóa thành công các hình ảnh của sản phẩm.")
+        if choice == "1":
+            filename = input("\nNhập tên file cần tìm (không cần phần mở rộng .png/.jpg): ").strip()
+            if filename:
+                print(f"\nĐang tìm kiếm hình ảnh có tên '{filename}'...")
+                media_items = find_media_by_filename(filename)
+                if media_items:
+                    print(f"\nTìm thấy {len(media_items)} hình ảnh:")
+                    for i, item in enumerate(media_items, 1):
+                        print(f"{i}. ID: {item['id']}, URL: {item['url']}, Filename: {item['filename']}")
                 else:
-                    print("Không có hình ảnh nào được xóa.")
+                    print("Không tìm thấy hình ảnh nào.")
             else:
-                print("Đã hủy thao tác xóa.")
+                print("Tên file không được để trống!")
+        
+        elif choice == "2":
+            filename = input("\nNhập tên file cần xóa (không cần phần mở rộng .png/.jpg): ").strip()
+            if filename:
+                confirm = input(f"Bạn có chắc chắn muốn xóa tất cả hình ảnh có tên '{filename}'? (yes/no): ").strip().lower()
+                if confirm == 'yes':
+                    if delete_media_by_filename(filename):
+                        print("Đã xóa thành công các hình ảnh.")
+                    else:
+                        print("Không có hình ảnh nào được xóa.")
+                else:
+                    print("Đã hủy thao tác xóa.")
+            else:
+                print("Tên file không được để trống!")
+        
+        elif choice == "3":
+            focus_keyword = input("\nNhập mã sản phẩm (focus_keyword), ví dụ: x20ai2222: ").strip().lower()
+            if not focus_keyword:
+                print("Mã sản phẩm không được để trống!")
+                return
+            
+            # Load image_prefix from config
+            image_prefix = config['image_prefix']
+            
+            # Tạo tên file hình đại diện và hình sản phẩm (không có phần mở rộng)
+            avatar_filename = f"{image_prefix}-{focus_keyword}"
+            image_filename = f"{config['image_prefix_diagram']}-{image_prefix}-{focus_keyword}"
+            
+            print(f"\nĐang tìm kiếm hình ảnh của sản phẩm {focus_keyword.upper()}...")
+            avatar_items = find_media_by_filename(avatar_filename)
+            image_items = find_media_by_filename(image_filename)
+            
+            total_items = len(avatar_items) + len(image_items)
+            if total_items > 0:
+                print(f"\nTìm thấy {total_items} hình ảnh liên quan đến sản phẩm {focus_keyword.upper()}:")
+                
+                if avatar_items:
+                    print("\nHình đại diện:")
+                    for i, item in enumerate(avatar_items, 1):
+                        print(f"{i}. ID: {item['id']}, URL: {item['url']}, Filename: {item['filename']}")
+                
+                if image_items:
+                    print("\nHình sản phẩm:")
+                    for i, item in enumerate(image_items, 1):
+                        print(f"{i}. ID: {item['id']}, URL: {item['url']}, Filename: {item['filename']}")
+                
+                confirm = input("\nBạn có chắc chắn muốn xóa tất cả hình ảnh này không? (yes/no): ").strip().lower()
+                if confirm == 'yes':
+                    deleted_avatar = delete_media_by_filename(avatar_filename) if avatar_items else False
+                    deleted_image = delete_media_by_filename(image_filename) if image_items else False
+                    
+                    if deleted_avatar or deleted_image:
+                        print("Đã xóa thành công các hình ảnh của sản phẩm.")
+                    else:
+                        print("Không có hình ảnh nào được xóa.")
+                else:
+                    print("Đã hủy thao tác xóa.")
+            else:
+                print(f"Không tìm thấy hình ảnh nào liên quan đến sản phẩm {focus_keyword.upper()}.")
+
+        elif choice == "4":
+            return
+        
         else:
-            print(f"Không tìm thấy hình ảnh nào liên quan đến sản phẩm {focus_keyword.upper()}.")
-    
-    elif choice == "4":
-        return
-    
-    else:
-        print("Lựa chọn không hợp lệ!")
-    
-    # Hỏi người dùng có muốn tiếp tục quản lý thư viện media không
-    continue_choice = input("\nBạn có muốn tiếp tục quản lý thư viện media không? (yes/no): ").strip().lower()
-    if continue_choice == 'yes':
-        manage_media_library()
+            print("Lựa chọn không hợp lệ!")
+        
+        # Hỏi người dùng có muốn tiếp tục quản lý thư viện media không
+        continue_choice = input("\nBạn có muốn tiếp tục quản lý thư viện media không? (yes/no): ").strip().lower()
+        if continue_choice == 'no':
+            break
 
 def update_configuration():
     """

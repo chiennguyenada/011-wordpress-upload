@@ -33,6 +33,10 @@ pip install requests
     "WP_URL": "https://your-wordpress-site.com",
     "CONSUMER_KEY": "your_consumer_key",
     "CONSUMER_SECRET": "your_consumer_secret",
+    "image_prefix": "your-image-prefix",
+    "image_prefix_diagram": "block-diagram",
+    "image_caption_prefix": "Block diagram",
+    "image_description_prefix": "Block diagram of module",
     "categories": [
         {"id": 123},
         {"id": 456}
@@ -41,7 +45,6 @@ pip install requests
         {"id": 789},
         {"id": 101}
     ],
-    "image_prefix": "your-image-prefix",
     "default_secondary_keywords": ["keyword1", "keyword2"]
 }
 ```
@@ -88,72 +91,18 @@ Dòng 4: Mã sản phẩm: [mã]
 1. Hình đại diện: `{image_prefix}-{focus_keyword}.png` hoặc `.jpg`  
    Ví dụ: `safety-plc-x20sl8110.png`
 
-2. Hình chi tiết: `so-do-chan-{image_prefix}-{focus_keyword}.png` hoặc `.jpg`  
-   Ví dụ: `so-do-chan-safety-plc-x20sl8110.png`
+2. Hình chi tiết: `{image_prefix_diagram}-{image_prefix}-{focus_keyword}.png` hoặc `.jpg`  
+   Ví dụ: `block-diagram-safety-plc-x20sl8110.png`
+
+## Cấu hình hình ảnh
+
+1. `image_prefix`: Tiền tố cho tên file hình ảnh avata (ví dụ tên hình avata là "automation-pc-4100-5apc4100.sx00-000.jpg" thì `image_prefix` là "automation-pc-4100")
+2. `image_prefix_diagram`: Tiền tố cho tên file hình sản phẩm ở trong bài (ví dụ tên file hình ảnh sản phẩm trong bài là "block-diagram-automation-pc-4100-5apc4100.sx00-000" thì `image_prefix_diagram` là "block-diagram")
+3. `image_caption_prefix`: Tiền tố cho chú thích hình ảnh (ví dụ: "Block diagram")
+4. `image_description_prefix`: Tiền tố cho mô tả hình ảnh (ví dụ: "Block diagram of module")
 
 ## Sử dụng
 
 ### Upload sản phẩm mới
 
 ```
-python main.py
-```
-
-Hoặc chỉ định file cụ thể:
-
-```
-python main.py --file X20SL8110
-```
-
-### Bỏ qua sản phẩm đã tồn tại
-
-```
-python main.py --skip-exist
-```
-
-### Cập nhật sản phẩm đã tồn tại
-
-```
-python main.py --force-update
-```
-
-### Đặt độ trễ giữa các lần upload
-
-```
-python main.py --delay 5
-```
-
-## Các tính năng
-
-1. **Đăng sản phẩm mới**
-   - Tự động kiểm tra hình ảnh local
-   - Tự động upload hình ảnh lên WordPress Media
-   - Tạo sản phẩm với đầy đủ thông tin SEO (Rank Math)
-
-2. **Cập nhật hình đại diện cho sản phẩm đã tồn tại**
-   - Tìm sản phẩm theo SKU
-   - Thay thế hình đại diện
-
-3. **Quản lý thư viện media**
-   - Tìm kiếm hình ảnh theo tên file
-   - Xóa hình ảnh theo tên file
-   - Xóa hình ảnh của một sản phẩm
-
-4. **Cập nhật cấu hình**
-   - Thay đổi danh mục, thẻ
-   - Thay đổi tiền tố hình ảnh
-   - Thêm từ khóa phụ mặc định
-
-## Xử lý lỗi
-
-- **SKU đang được xử lý**: Đợi vài phút và thử lại, hoặc sử dụng `--skip-exist`
-- **Thiếu hình ảnh local**: Đảm bảo hình ảnh tồn tại trong thư mục tương ứng
-- **Cache WordPress**: Nếu gặp vấn đề, hãy xóa cache của WordPress
-
-## Đóng góp
-
-Vui lòng gửi yêu cầu tính năng hoặc báo cáo lỗi qua phần Issues.
-
-## Giấy phép
-
-Phát hành dưới giấy phép MIT. 
